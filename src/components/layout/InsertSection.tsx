@@ -1,9 +1,65 @@
-import { BookPlus } from "lucide-react"
+'use client'
+
+import { BookOpen, BookPlus } from "lucide-react"
+import { useState } from "react"
+import { Input } from "../UI/Input";
+import { Select } from "../UI/Select";
 
 const InsertSection = () => {
+    const [open, setOpen] = useState(false);
+
+    const toggleOpen = () => {
+        setOpen(!open);
+    }
+
     return (
-        <div className="fixed bottom-16 bg-emerald-500 w-fit p-3 rounded-full text-white">
-            <BookPlus/>
+        <div className="fixed bottom-20 flex flex-col-reverse lg:flex-row gap-4 items-center">
+            {!open && (
+                <div className="bg-emerald-500 w-fit lg:h-fit p-3 rounded-full text-white cursor-pointer">
+                    <BookPlus onClick={toggleOpen} />
+                </div>
+            )}
+            {open && (
+                <>
+                    <div className="bg-emerald-500 w-fit lg:h-fit p-3 rounded-full text-white cursor-pointer">
+                        <BookOpen onClick={toggleOpen} />
+                    </div>
+
+                    <form className="flex flex-col lg:flex-row items-end gap-6 bg-white dark:bg-zinc-900 shadow-xl rounded-lg p-4 border dark:border-zinc-800">
+                        <Input.Root>
+                            <Input.Label>Linguagens</Input.Label>
+                            <Input.Content type="number" />
+                        </Input.Root>
+                        <Input.Root>
+                            <Input.Label>Matemática</Input.Label>
+                            <Input.Content type="number" />
+                        </Input.Root>
+                        <Input.Root>
+                            <Input.Label>Natureza</Input.Label>
+                            <Input.Content type="number" />
+                        </Input.Root>
+                        <Input.Root>
+                            <Input.Label>Humanas</Input.Label>
+                            <Input.Content type="number" />
+                        </Input.Root>
+                        <Input.Root>
+                            <Input.Label>Redação</Input.Label>
+                            <Input.Content type="number" />
+                        </Input.Root>
+                        <Select.Root>
+                            <Select.Label>Modalidade</Select.Label>
+                            <Select.Content>
+                                <Select.Option text="Grupo 1" />
+                                <Select.Option text="Grupo 2" />
+                                <Select.Option text="Grupo 3" />
+                                <Select.Option text="Grupo 4" />
+                                <Select.Option text="Grupo 5" />
+                            </Select.Content>
+                        </Select.Root>
+                        <button type="submit" className="bg-emerald-500 text-sm font-semibold text-white h-fit p-2 px-3 rounded-lg w-full">Salvar</button>
+                    </form>
+                </>
+            )}
         </div>
     )
 }
