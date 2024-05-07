@@ -11,8 +11,8 @@ const Header = () => {
                 </div>
             </div>
             <div className="flex items-center gap-4">
-                <a className="text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300" href="#">Suporte</a>
-                <a className="text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300" href="#">Sobre</a>    
+                <a className="hidden lg:flex text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300" href="#">Suporte</a>
+                <a className="hidden lg:flex text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300" href="#">Sobre</a>    
                 <ThemeToggle/>
             </div>
         </header>

@@ -6,7 +6,7 @@ export default function Home() {
 	return (
 		<main>
 			<AboutSection.Wrapper>
-				<div className="flex justify-between items-center">
+				<div className="flex flex-col lg:flex-row justify-between lg:items-center gap-8">
 					<div>
 						<AboutSection.Title text="Simule suas notas e entre para a melhor do Brasil!" />
 						<AboutSection.Description text="Simule suas notas para entrar na melhor faculdade do Brasil! São +60 curso e 361 vagas disponíveis!" />
