@@ -4,7 +4,7 @@ import { GraduationCap, MapPin, Users } from "lucide-react";
 
 export default function Home() {
 	return (
-		<main>
+		<main className="flex flex-col gap-4">
 			<AboutSection.Wrapper>
 				<div className="flex justify-between items-center">
 					<div>
