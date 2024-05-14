@@ -1,3 +1,4 @@
+import CardWrapper from '@/components/layout/CardWrapper';
 import { getIcon } from '@/utils/getIcon.utils'
 import { CircleArrowUp, Clock, MapPin, Star } from 'lucide-react';
 import React from 'react'
@@ -10,7 +11,7 @@ const Card = ({ curso }: CardProps) => {
     const IconComponent = getIcon(curso.nome);
 
     return (
-        <div className='flex flex-col bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50  rounded-xl shadow gap-2 p-6 w-fit hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer'>
+        <CardWrapper>
             <div className='flex justify-end'>
                 <Star size={16} color='#10b981'/>
             </div>
@@ -38,7 +39,7 @@ const Card = ({ curso }: CardProps) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </CardWrapper>
     )
 }
 

@@ -12,7 +12,7 @@ const InsertSection = () => {
 
     return (
         <div className="fixed bottom-20 flex flex-col-reverse lg:flex-row gap-4 items-center">
-            <div className="relative bg-emerald-500 w-fit lg:h-fit p-3 rounded-full text-white cursor-pointer" onClick={toggleOpen}>
+            <div className="relative bg-emerald-500 hover:bg-emerald-400 w-fit lg:h-fit p-3 rounded-full text-white cursor-pointer" onClick={toggleOpen}>
                 <BookPlus className={`transition-transform transform ${open ? 'scale-0 rotate-90' : 'scale-100 rotate-0'}`} />
                 <BookOpen className={`absolute inset-0 m-auto transition-transform transform ${open ? 'scale-100 rotate-0' : 'scale-0 rotate-90'}`} />
             </div>
