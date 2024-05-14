@@ -11,7 +11,7 @@ const Card = ({ curso }: CardProps) => {
     const IconComponent = getIcon(curso.nome);
 
     return (
-        <CardWrapper>
+        <CardWrapper className='dark:hover:bg-zinc-800 hover:bg-zinc-100 w-fit cursor-pointer'>
             <div className='flex justify-end'>
                 <Star size={16} color='#10b981'/>
             </div>
