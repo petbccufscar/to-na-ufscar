@@ -49,7 +49,7 @@ const FilterIcon = ({handleFilterOnClick }: {handleFilterOnClick: () => void }) 
 //Pop up com as opções de filtro
 const FilterBox = () => {
     return (
-        <div className='flex flex-col bg-white dark:bg-zinc-900 rounded-2xl shadow gap-2 p-4 w-56'>
+        <div className='absolute top-12 flex flex-col bg-white dark:bg-zinc-900 rounded-2xl shadow-lg gap-2 p-4 w-56 z-10 border dark:border-zinc-800'>
             <FilterSelection text='São Carlos' />
             <FilterSelection text='Sorocaba' />
             <FilterSelection text='Lagoa do Sino' />
@@ -78,7 +78,7 @@ const SearchArea = () => {
     }
 
     return (
-        <div className='flex flex-col gap-1'>
+        <div className='relative flex flex-col gap-1'>
             <div className='flex gap-4'>
                 <div className='flex flex-col gap-2'>
                     <FilterIcon handleFilterOnClick={handleFilterOnClick} />

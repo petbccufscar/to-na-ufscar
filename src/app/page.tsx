@@ -1,3 +1,4 @@
+import CardsSection from "@/components/pages/home/CardsSection";
 import SearchArea from "@/components/pages/home/SearchArea";
 import { AboutSection } from "@/components/templates/AboutSection";
 import { GraduationCap, MapPin, Users } from "lucide-react";
@@ -19,6 +20,7 @@ export default function Home() {
 				</div>
 			</AboutSection.Wrapper>
 			<SearchArea/>
+			<CardsSection/>
 		</main>
 	);
 }
