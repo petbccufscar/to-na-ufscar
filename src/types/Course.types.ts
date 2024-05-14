@@ -1,4 +1,4 @@
-interface Grades {
+type Grades = {
     sisu: number;
     maxima: number;
     minima: number;

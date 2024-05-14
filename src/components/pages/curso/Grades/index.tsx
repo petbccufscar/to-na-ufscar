@@ -1,5 +1,6 @@
-import React from 'react'
+'use client'
 import { useState } from 'react'
+import CardWrapper from '@/components/layout/CardWrapper'
 
 
 import AllTables from './GradesTable'
@@ -9,23 +10,24 @@ import Navbar from './Navbar'
 interface CardProps {
    curso: Course
 }
-const CardsSection = ({curso}: CardProps) => {
-   const firstYear = Object.keys(curso.notas)[0];
-   const [selectedYear, setSelectedYear] = useState<string>(firstYear)
-
+const Grades = ({curso}: CardProps) => {
+   const [selectedYear, setSelectedYear] = useState<string>("2023")
 
    function changeYear(year:string){
        setSelectedYear(year)
    }
 
-
    return (
-       <div className='flex flex-col bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50  rounded-xl shadow gap-2 p-6 w-fit hover:bg-zinc-100 dark:hover:bg-zinc-800 cursor-pointer'>
-           <Navbar curso={curso}/>
-           <AllTables curso={curso}/>
-       </div>
+       <CardWrapper className='p-8'>
+            <h2 className='text-3xl font-semibold'>Notas de corte e pesos - Grupo 1</h2>
+            <div className='flex flex-col gap-4'>
+                <Navbar curso={curso} changeYear={changeYear} selectedYear={selectedYear}/>
+                <AllTables curso={curso} selectedYear={selectedYear}/>
+            </div>
+
+       </CardWrapper>
    )
 }
 
 
-export default CardsSection
+export default Grades
