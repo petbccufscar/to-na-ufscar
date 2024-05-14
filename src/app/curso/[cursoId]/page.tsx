@@ -2,7 +2,7 @@ import CardWrapper from "@/components/layout/CardWrapper";
 import Grades from "@/components/pages/curso/Grades";
 import Results from "@/components/pages/curso/Results";
 import { AboutSection } from "@/components/templates/AboutSection";
-import { GraduationCap, MapPin, Users } from "lucide-react";
+import { Clock, GraduationCap, MapPin, Users } from "lucide-react";
 
 
 export default function Curso({ params }: { params: { cursoId: string } }) {
@@ -21,7 +21,7 @@ export default function Curso({ params }: { params: { cursoId: string } }) {
 					</div>
 					<AboutSection.IconArea>
 						<AboutSection.IconText icon={MapPin} text={`Campus ${"Sorobaba"}`} />
-						<AboutSection.IconText icon={GraduationCap} text="64 cursos" />
+						<AboutSection.IconText icon={Clock} text="Noturno" />
 						<AboutSection.IconText icon={Users} text="2897 vagas" />
 					</AboutSection.IconArea>
 				</div>
