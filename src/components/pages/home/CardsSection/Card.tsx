@@ -34,7 +34,7 @@ const Card = ({ curso }: CardProps) => {
                     </div>
                     <div className='flex items-center gap-1'>
                         <CircleArrowUp size={16} color='#10b981'/>
-                        <p className='font-semibold text-sm' >Chances {"altas"}</p>
+                        <p className='font-semibold text-sm'>Chances {"altas"}</p>
                     </div>
                 </div>
             </div>
