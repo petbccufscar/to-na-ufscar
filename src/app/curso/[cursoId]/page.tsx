@@ -13,7 +13,7 @@ export default function Curso({ params }: { params: { cursoId: string } }) {
 					<div>
 						<AboutSection.GoBack />
 						<div>
-							<AboutSection.Title text={`Curso ${params.cursoId} - ${"Licensiatura"}`} />
+							<AboutSection.Title text={`Curso ${params.cursoId} - ${"Licenciatura"}`} />
 							<AboutSection.Description text={`Descrição da Matéria`} />
 							<AboutSection.Description text={`...`} />
 							<AboutSection.Description text={`...`} />
