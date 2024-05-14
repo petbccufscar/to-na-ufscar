@@ -10,7 +10,7 @@ const Header = () => {
                     Tô na UFSCar?
                 </div>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 text-sm">
                 <a className="hidden lg:flex text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300" href="#">Suporte</a>
                 <a className="hidden lg:flex text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300" href="#">Sobre</a>    
                 <ThemeToggle/>
