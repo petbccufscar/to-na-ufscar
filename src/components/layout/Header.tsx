@@ -6,7 +6,7 @@ const Header = () => {
         <header className="flex justify-between pb-4">
             <div className="flex gap-2 items-center">
                 <GraduationCap color="#10b981"/>
-                <div className="font-bold text-xl text-emerald-500">
+                <div className="font-bold text-nowrap text-xl text-emerald-500">
                     Tô na UFSCar?
                 </div>
             </div>

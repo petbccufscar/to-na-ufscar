@@ -34,22 +34,22 @@ const FilterSelection = ({ text }: FilterTextProps) => {
 };
 
 //Ícone para o filtro, onde ao se clicar ele abre o pop-up com os filtros
-const FilterIcon = ({handleFilterOnClick }: {handleFilterOnClick: () => void }) => {
-    return (
-        <div
-            onClick={handleFilterOnClick}
-            className='flex gap-2 justify-center items-center rounded-lg px-10 py-2 bg-emerald-500 hover:bg-emerald-400 hover:cursor-pointer'
-        >
-            <ListFilter color='white' />
-            <p className='text-white'>Filter</p>
-        </div>
-    );
+const FilterIcon = ({ handleFilterOnClick }: { handleFilterOnClick: () => void }) => {
+  return (
+    <div
+      onClick={handleFilterOnClick}
+      className='flex gap-2 justify-center items-center rounded-lg px-10 py-2 bg-emerald-500 hover:bg-emerald-400 hover:cursor-pointer'
+    >
+      <ListFilter color='white' />
+      <p className='text-white hidden sm:flex'>Filter</p>
+    </div>
+  );
 };
 
 //Pop up com as opções de filtro
 const FilterBox = () => {
     return (
-        <div className='absolute top-12 flex flex-col bg-white dark:bg-zinc-900 rounded-2xl shadow-lg gap-2 p-4 w-56 z-10 border dark:border-zinc-800'>
+        <div className='absolute top-12 flex flex-col bg-white dark:bg-zinc-900 rounded-2xl shadow-lg gap-2 p-4 w-56 border dark:border-zinc-800'>
             <FilterSelection text='São Carlos' />
             <FilterSelection text='Sorocaba' />
             <FilterSelection text='Lagoa do Sino' />
@@ -63,7 +63,7 @@ const SearchBar = () => {
     return (
         <div className='flex gap-2 pl-4 items-center rounded-lg w-full py-2 border bg-transparent shadow dark:border-zinc-800'>
             <Search size={16} color='#737373' />
-            <input className='outline-none w-full bg-transparent' type='text' placeholder='Busque por cursos, áreas de conhecimento....' />
+            <input className='outline-none w-full bg-transparent placeholder:text-transparent sm:placeholder:text-zinc-400' type='text' placeholder='Busque por cursos, áreas de conhecimento....' />
         </div>
     );
 };

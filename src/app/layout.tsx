@@ -23,7 +23,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<div className="flex flex-col justify-between min-h-screen h-full p-4 px-8">
-						<div className="flex flex-col gap-4">
+						<div className="flex flex-col gap-2">
 							<Header/>
 							<InsertSection/>
 							{children}

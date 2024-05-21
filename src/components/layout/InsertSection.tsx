@@ -11,13 +11,13 @@ const InsertSection = () => {
     const toggleOpen = () => setOpen(!open);
 
     return (
-        <div className="fixed bottom-20 flex flex-col-reverse lg:flex-row gap-4 items-center">
+        <div className={`fixed flex flex-col-reverse lg:flex-row gap-4 items-center z-20 ${open ? 'bottom-10' : 'bottom-[64px]'}`}>
             <div className="relative bg-emerald-500 hover:bg-emerald-400 w-fit lg:h-fit p-3 rounded-full text-white cursor-pointer" onClick={toggleOpen}>
                 <BookPlus className={`transition-transform transform ${open ? 'scale-0 rotate-90' : 'scale-100 rotate-0'}`} />
                 <BookOpen className={`absolute inset-0 m-auto transition-transform transform ${open ? 'scale-100 rotate-0' : 'scale-0 rotate-90'}`} />
             </div>
             {open && (
-                <form className="flex flex-col lg:flex-row items-end gap-6 bg-white dark:bg-zinc-900 shadow-xl rounded-lg p-4 border dark:border-zinc-800">
+                <form className="flex flex-col lg:flex-row items-end gap-6 bg-white dark:bg-zinc-900 shadow-xl rounded-lg p-4 border dark:border-zinc-800 overflow-auto max-h-[70vh]">
                     <Input.Root>
                         <Input.Label>Linguagens</Input.Label>
                         <Input.Content type="number" />

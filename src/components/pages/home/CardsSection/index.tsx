@@ -34,7 +34,12 @@ const gastronomia = {
 
 const CardsSection = () => {
     return (
-        <div>
+        <div className='flex flex-wrap gap-4'>
+            <Card curso={gastronomia} />
+            <Card curso={gastronomia} />
+            <Card curso={gastronomia} />
+            <Card curso={gastronomia} />
+            <Card curso={gastronomia} />
             <Card curso={gastronomia} />
         </div>
     )

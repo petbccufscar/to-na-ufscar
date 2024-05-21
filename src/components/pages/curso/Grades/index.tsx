@@ -20,7 +20,7 @@ const Grades = ({curso}: CardProps) => {
    return (
        <CardWrapper className='p-8'>
             <h2 className='text-3xl font-semibold'>Notas de corte e pesos - Grupo 1</h2>
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 w-full'>
                 <Navbar curso={curso} changeYear={changeYear} selectedYear={selectedYear}/>
                 <AllTables curso={curso} selectedYear={selectedYear}/>
             </div>

@@ -11,14 +11,14 @@ const Card = ({ curso }: CardProps) => {
     const IconComponent = getIcon(curso.nome);
 
     return (
-        <CardWrapper className='dark:hover:bg-zinc-800 hover:bg-zinc-100 w-fit cursor-pointer'>
+        <CardWrapper className='dark:hover:bg-zinc-800 hover:bg-zinc-100 w-fit text-nowrap cursor-pointer'>
             <div className='flex justify-end'>
                 <Star size={16} color='#10b981'/>
             </div>
 
             {IconComponent && <IconComponent className='text-7xl' />}
             <h2 className='font-bold text-3xl'>{curso.nome} <span className='text-xs font-normal'>({curso.modelo})</span> </h2>
-            <div className='flex justify-between gap-8'>
+            <div className='flex flex-col-reverse sm:flex-row justify-between gap-3 sm:gap-6'>
                 <div className='flex flex-col gap-2'>
                     <div className='flex items-center gap-1'>
                         <MapPin size={16} color='#10b981'/>
